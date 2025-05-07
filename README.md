@@ -20,15 +20,15 @@ Untuk melakukan instalasi Codeigniter 4 dapat dilakukan dengan dua cara, yaitu c
 2. Extrak file zip Codeigniter ke direktori htdocs/Lab11_php_ci.
 3. Ubah nama direktory framework-4.x.xx menjadi ci4.
 4. Buka browser dengan alamat http://localhost/Lab11_php_ci/ci4/public/
-![gambar](ss_gambar_pemrograman_web2/ss1_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss1_tugas_pemrograman_web2.png)
 
 ## Menjalankan CLI (Command Line Interface)
 ### Codeigniter 4 menyediakan CLI untuk mempermudah proses development. Untuk mengakses CLI buka terminal/command prompt.
-![gambar](ss_gambar_pemrograman_web2/ss2_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss2_tugas_pemrograman_web2.jpeg)
 
-![gambar](ss_gambar_pemrograman_web2/ss3_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss3_tugas_pemrograman_web2.png)
 ### Contoh error yang terjadi. Untuk mencoba error tersebut, ubah kode pada file app/Controller/Home.php hilangkan titik koma pada akhir kode.
-![gambar](ss_gambar_pemrograman_web2/ss4_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss4_tugas_pemrograman_web2.png)
 
 ## Auto Routing
 ### Tambahkan method baru pada Controller Page seperti berikut.
@@ -39,7 +39,7 @@ echo "ini halaman Term of Services";
 }
 ```
 ### Method ini belum ada pada routing, sehingga cara mengaksesnya dengan menggunakan alamat: http://localhost:8080/page/tos
-![gambar](ss_gambar_pemrograman_web2/ss5_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss5_tugas_pemrograman_web2.png)
 
 ## Membuat View
 ### Selanjutnya adalam membuat view untuk tampilan web agar lebih menarik. Buat file baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi kodenya seperti berikut.
@@ -135,7 +135,7 @@ public function about()
 <?= $this->include('template/footer'); ?>
 ```
 ### Selanjutnya refresh tampilan pada alamat http://localhost:8080/about
-![gambar](ss_gambar_pemrograman_web2/ss6_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss6_tugas_pemrograman_web2.png)
 
 # Praktikum 2: Framework Lanjutan (CRUD)
 ## Tujuan
@@ -216,7 +216,7 @@ INSERT INTO artikel (judul, isi, slug) VALUE
 ('Artikel kedua', 'Tidak seperti anggapan banyak orang, Lorem Ipsum bukanlah teks-teks yang diacak. Ia berakar dari sebuah naskah sastra latin klasik dari era 45 sebelum masehi, hingga bisa dipastikan usianya telah mencapai lebih dari 2000 tahun.', 'artikel-kedua');
 ```
 ### Refresh kembali browser, sehingga akan ditampilkan hasilnya.
-![gambar](ss_gambar_pemrograman_web2/ss7_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss7_tugas_pemrograman_web2.png)
 
 ## Membuat Tampilan Detail Artikel
 Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada Controller Artikel dengan nama view().
@@ -257,7 +257,7 @@ Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artike
 ```php
 $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 ```
-![gambar](ss_gambar_pemrograman_web2/ss8_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss8_tugas_pemrograman_web2.png)
 
 ## Membuat Menu Admin
 Menu admin adalah untuk proses CRUD data artikel. Buat method baru pada Controller artikel dengan nama admin_index().
@@ -327,7 +327,7 @@ $routes->get('artikel/delete/(:any)', 'Artikel::delete/$1');
 });
 ```
 ### Akses menu admin dengan url http://localhost:8080/admin/artikel
-![gambar](ss_gambar_pemrograman_web2/ss9_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss9_tugas_pemrograman_web2.png)
 
 ## Menambah Data Artikel
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama add().
@@ -374,7 +374,7 @@ Kemudian buat view untuk form tambah dengan nama form_add.php
 
 <?= $this->include('template/admin_footer'); ?>
 ```
-![gambar](ss_gambar_pemrograman_web2/ss10_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss10_tugas_pemrograman_web2.png)
 
 ## Mengubah Data
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama edit().
@@ -423,7 +423,7 @@ Kemudian buat view untuk form tambah dengan nama form_edit.php
 
 <?= $this->include('template/admin_footer'); ?>
 ```
-![gambar](ss_gambar_pemrograman_web2/ss11_tugas_pemrograman_web2.png)
+![gambar](ss_pemrograman_web2/ss11_tugas_pemrograman_web2.png)
 
 # Praktikum 3: View Layout dan View Cell
 ## Tujuan
